@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+<body>
+    <table class="table table-striped table-hover">
+        <tr>
+            <th scope="col">Result Id</th>
+            <th scope="col">Party Abbreviation</th>
+            <th scope="col">Party Score</th>
+        </tr>
+        <h1>{{results_name}}</h1>
+        {% for results in results %}
+            <tr>
+                <td>{{results.result_id}}</td>
+                <td>{{results.party_abbreviation}}</td>
+                <td>{{results.party_score}}</td>
+            </tr>
+
+    {% endfor %}
+    </table>
+    
+</body>
+</html>
